@@ -59,7 +59,7 @@ So we used **percentile rescaling**. Instead of trusting the compressed 1-3 scor
 
 This preserved all the ranking information (if A was more attractive than B, that stayed true) while giving us a proper distribution that a neural network could actually learn from.
 
-![Score Distribution Comparison](results/score_comparison.png)  
+![Score Distribution Comparison](blog_figures/score_comparison.png)  
 *Figure 2: Left shows the original compressed scores (mean=2.74), right shows the rescaled scores (mean=5.5). The rescaling spreads the data across the full 1-10 range while preserving the relative rankings.*
 
 ---
