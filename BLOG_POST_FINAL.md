@@ -153,7 +153,7 @@ We used three techniques:
 
 After all the failures and adjustments, the third attempt worked!
 
-![Training History](results/training_simple.png)  
+![Training History](blog_figures/training_simple.png)  
 *Figure 3: Training curves showing the model converged properly. The validation loss (blue) reached its best point at epoch 1 and early stopping kicked in at epoch 8, preventing overfitting.*
 
 **Key Metrics:**
