@@ -1,16 +1,50 @@
 #!/usr/bin/env python3
 """
 Simple Setup Script
-
 """
 
 import os
 import glob
 import pandas as pd
+import subprocess
+import sys
+import importlib
+
+
+# ----------------------------------------------------
+# Install dependencies if missing
+# ----------------------------------------------------
+
+REQUIRED = [
+    "pandas",
+    "torch",
+    "torchvision",
+    "pillow",
+    "matplotlib",
+    "tqdm"
+]
+
+def install_deps():
+    print("Checking dependencies (installing if missing)...")
+    for pkg in REQUIRED:
+        try:
+            importlib.import_module(pkg)
+            print(f"  ✓ {pkg} is already installed")
+        except ImportError:
+            print(f"  ⬇ Installing {pkg} ...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
+
+
+
+# ----------------------------------------------------
+# MAIN SCRIPT
+# ----------------------------------------------------
 
 def main():
 
-    
+    # step 0 — make sure deps are installed
+    install_deps()
+
     csv_files = glob.glob('*.csv')
     
     if not csv_files:
