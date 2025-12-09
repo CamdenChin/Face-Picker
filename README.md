@@ -2,10 +2,6 @@
 
 A learning system that predicts attractiveness scores (1-10 scale) using transfer learning on celebrity ELO ratings. Built for potential dating app integration to enable similarity-based matching.
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -39,8 +35,6 @@ This project implements a neural network that predicts facial attractiveness sco
 ## Dataset
 
 The dataset consists of 1,000 celebrity images rated through a head-to-head ELO ranking system where users voted on "who is more attractive?" in pairwise comparisons.
-
-**Dataset Source:** [Add link to your dataset source]
 
 **Original Data Challenges:**
 - Average celebrity played only 3.6 games (98% had <10 games)
@@ -76,19 +70,6 @@ nn.Sequential(
 )
 ```
 
-**Training Configuration:**
-- Loss Function: Mean Squared Error (MSE)
-- Optimizer: Adam (lr=0.0005)
-- Scheduler: ReduceLROnPlateau (patience=3, factor=0.5)
-- Early Stopping: Patience of 7 epochs
-- Data Split: 80% train (800), 20% validation (200)
-
-**Data Augmentation:**
-- Random horizontal flip
-- Random crop (256 to 224)
-- Color jitter (brightness, contrast)
-- Standard ImageNet normalization
-
 ### Architecture Decisions
 
 **Why Single Model Instead of Gender-Specific?**
@@ -103,12 +84,6 @@ nn.Sequential(
 - Early stopping prevents excessive memorization
 
 ## Installation
-
-### Prerequisites
-- Python 3.8 or higher
-- pip package manager
-- Approximately 2GB disk space for dependencies
-- Approximately 500MB disk space for celebrity images (downloaded automatically)
 
 ### Setup
 
@@ -139,7 +114,6 @@ python train_simple.py
 **Output:** `attractiveness_model_simple.pth` (approximately 45MB)  
 **Expected validation loss:** Approximately 0.08
 
-**Note:** The trained model file is not included in this repository due to size constraints. Follow the training step above to generate it, or download from [Google Drive link if provided].
 
 ## Usage
 
@@ -419,10 +393,9 @@ mv training_simple.png results/
 4. **Harmful Use Cases:** Could reinforce harmful beauty standards or enable discrimination
 
 ### Scope Limitations
-1. **Face-Only:** Does not account for body, style, personality, or chemistry
+1. **Face-Only:** Does not account for body, style, or personality
 2. **Static Photos:** Real attractiveness includes movement, expression, context
-3. **Cultural Specificity:** Trained on Western beauty standards
-4. **No Demographics:** Does not account for age, ethnicity, or individual preferences
+3. **No Demographics:** Does not account for age, ethnicity, or individual preferences
 
 **Responsible Use:**
 This system is intended for research and entertainment purposes only. A numerical score does not define human worth, and attractiveness is multidimensional, subjective, and culturally specific.
@@ -430,7 +403,6 @@ This system is intended for research and entertainment purposes only. A numerica
 ## Blog Post
 
 **Read the full blog post explaining this project:**
-[Link to your blog post - add this before submission]
 
 The blog post provides a non-technical explanation of this project, covering:
 - Introduction and problem statement
@@ -464,36 +436,9 @@ The blog post provides a non-technical explanation of this project, covering:
 - Bias detection and mitigation
 - Comparison to human inter-rater reliability
 
-## Technology Stack
-
-- **Deep Learning:** PyTorch 2.0+
-- **Computer Vision:** torchvision, PIL
-- **Data Processing:** pandas, numpy
-- **Visualization:** matplotlib
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- **ResNet Architecture:** He et al. (2015) - Deep Residual Learning for Image Recognition
-- **Transfer Learning Approach:** ImageNet pretrained weights
-- **ELO Rating System:** Arpad Elo (chess rating methodology)
-- **Celebrity Dataset:** [Cite your data source]
-
 ## Author
 
-**Juliana Vega Lara**
-- Duke University - Study Abroad Copenhagen
-- Course: Artificial Neural Networks
-- Date: December 2025
-
-## References
-
-1. He, K., Zhang, X., Ren, S., & Sun, J. (2015). Deep Residual Learning for Image Recognition. *CVPR 2016*.
-2. Deng, J., Dong, W., Socher, R., Li, L. J., Li, K., & Fei-Fei, L. (2009). ImageNet: A Large-Scale Hierarchical Image Database. *CVPR 2009*.
-3. Elo, A. E. (1978). *The Rating of Chessplayers, Past and Present*. Arco Publishing.
+**Camden Chin and Juliana Vegalara**
 
 ## Issues and Contributing
 
