@@ -36,7 +36,7 @@ We found an existing dataset with over 1,000 celebrity photos. Using these photo
 
 When we analyzed the dataset, we discovered a fundamental problem: **98% of the celebrities had been rated in fewer than 10 comparisons.** Most had only 3-4 ratings due to time constraints. This was not nearly enough information to be reliable.
 
-![ELO Analysis](results/elo_analysis.png)  
+![ELO Analysis]([results/elo_analysis.png](https://github.com/CamdenChin/Face-Picker/blob/296163725a447d9430a67a2922618a7e7bb89d70/blog_figures/elo_analysis.png))  
 *Figure 1: Data quality analysis showing that 98% of celebrities had fewer than 10 games, making their ratings highly unreliable. The top-left graph shows most celebrities clustered at very low game counts.*
 
 The consequences were severe:
