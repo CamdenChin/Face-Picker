@@ -53,22 +53,6 @@ All preprocessing steps are documented in `fix_low_games.py` and `analyze_elo.py
 
 ## Architecture
 
-### Model Design
-
-**Base Model:** ResNet18 (pretrained on ImageNet)
-- Transfer learning leverages existing feature extraction capabilities
-- Fine-tuned on attractiveness-specific features
-
-**Custom Head:**
-```python
-nn.Sequential(
-    nn.Linear(512, 128),
-    nn.ReLU(),
-    nn.Dropout(0.3),
-    nn.Linear(128, 1),
-    nn.Sigmoid()
-)
-```
 
 ### Architecture Decisions
 
